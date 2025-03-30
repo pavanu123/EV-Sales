@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolution of Electric Vehicles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="static/img/evlogo.png" rel="icon">
+    <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+    
+    <style>
+        
+       
+    /* ... existing styles ... */
+    
+    body {
+        background-image: url("static/img/blog/tesblu.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        
+    }
+    
+    /* ... existing styles ... */
+
+
+
+
+
+
+        .timeline {
+            position: relative;
+            padding: 50px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 100%;
+            background: #2ecc71;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+        }
+
+        .timeline-item {
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .timeline-content {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+            width: calc(50% - 30px);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #087662;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            left: -40px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            right: -40px;
+        }
+
+        .timeline-date {
+            color: #2ecc71;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .hero-section {
+            background-blend-mode: darken;
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            color: rgb(4, 10, 50);
+            text-align: left;
+            text-overflow: ellipsis;
+            
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px !important;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content::before,
+            .timeline-item:nth-child(even) .timeline-content::before {
+                left: -40px;
+                right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">EV Motors</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{url_for('index')}}">Home</a>
+                    </li>
+                 
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4" ><b>Evolution of Electric Vehicles</h1></b>
+            <p class="lead">From 1830s to Present Day</p>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline">
+        <div class="container">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">1830-1880</div>
+                    <img src="static\img\blog\first.jpeg" width="50%"alt="Early Electric Vehicles" class="timeline-image">
+                    <h3 class="timeline-title">The Early Pioneers</h3>
+                    <p>First electric vehicles emerged with inventors like Robert Anderson, Anyos Jedlik, and Thomas Davenport creating experimental prototypes. Gaston Plante invented the first rechargeable lead-acid battery in 1860s.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">1880-1914</div>
+                    
+                    <h3 class="timeline-title">The Golden Age</h3>
+                    <p>Electric vehicles gained popularity, comprising 38% of vehicles on American roads. William Morrison built the first practical electric car in the US, capable of carrying 12 people at 20 mph.</p>
+                    <p><b>The First Hybrid Car</b></p>
+                    <img src="static\img\blog\porsche-hybrid1.webp" width="60%">
+                    <br><p1>The first hybrid car, built by engineer Ferdinand Porsche in 1899, was the System Lohner-Porsche Mixte, which used a gas engine to supply power to an electric motor that drove the car’s front wheels.</p1>
+                    
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">1914-1970</div>
+                    <h3 class="timeline-title">The Decline</h3>
+                   <p><img src="static\img\blog\grop.webp" width="50%">
+                    <p1>Mass production of Ford's Model T and cheap gasoline led to the dominance of internal combustion engines. Electric vehicles almost disappeared from the market by the 1930s</p1>.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">1970-2003</div>
+                    <h3 class="timeline-title">The Revival</h3>
+                    <img src="static\img\blog\spike.webp" width="50%">
+                    <p>Oil crisis sparked renewed interest in electric vehicles. Toyota Prius launched in 1997 as the first mass-produced hybrid vehicle, marking a significant turning point.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">2003-2020</div>
+                    <h3 class="timeline-title">The Revolution</h3>
+                    <img src="static\img\blog\20t.webp" width="50%">
+                    <p>Tesla Motors formed in 2003, revolutionizing electric vehicles. Nissan LEAF launched in 2010. Battery technology improved significantly, making EVs more practical and affordable.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">2021-Present</div>
+                    <h3 class="timeline-title">The Tipping Point</h3>
+                    <img src="static\img\blog\backkl.webp" width="50%">
+                    <p>Over 26 million EVs on roads globally. Major automakers commit to electric future. Norway leads with 80% new car sales being electric. Global EV sales exceeded 10 million in 2022.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

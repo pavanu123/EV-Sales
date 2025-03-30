@@ -1,0 +1,50 @@
+{% extends 'index.html' %}
+
+{% block a %} 
+<li><a href="{{ url_for('index') }}#hero" class="active">Home</a></li>
+<li><a href="{{ url_for('index') }}#about">About</a></li>
+<li><a href="{{ url_for('index') }}#team">Team</a></li>
+<li><a href="{{ url_for('index') }}#contact">Contact</a></li>
+{% endblock %}
+
+{% block body %}
+<br><br><br>
+<div class="container">
+    <br><br>
+    <p class="text-right"><a href="{{ url_for('add_user') }}" class="btn btn-success"><b>+ Add User</b></a></p>
+
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>SNo</th>
+                <th>CNAME</th>
+                <th>COUNTRY</th>
+                <th>YEAR</th>
+                <th>SALES</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.SNo }}</td>
+                <td>{{ user.CNAME }}</td>
+                <td>{{ user.COUNTRY }}</td>
+                <td>{{ user.YEAR }}</td>
+                <td>{{ user.SALES }}</td>
+                <td><a href="{{ url_for('edit_user', sno=user.SNo) }}" class="btn btn-primary">Edit</a></td>
+                <td>
+                    <a href="{{ url_for('delete_user', sno=user.SNo) }}" class="btn btn-danger" 
+                       onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}

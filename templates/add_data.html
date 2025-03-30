@@ -1,0 +1,186 @@
+{% extends 'base.html' %}
+
+{% block title %}add_data page{% endblock %}
+
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Data Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            padding: 20px;
+        }
+        form {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+            border: 1px solid #ddd;
+        }
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 12px;
+            vertical-align: middle;
+        }
+        label {
+            font-weight: 600;
+            color: #333;
+        }
+        input[type="text"], input[type="date"], input[type="radio"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        input[type="radio"] {
+            width: auto;
+            margin-right: 8px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .gender-labels {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .gender-labels input {
+            width: auto;
+        }
+        .gender-labels label {
+            margin: 0;
+        }
+        .form-footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .form-footer small {
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <form method="POST" action="/submit">
+        <h1>Add the Data</h1>
+        <table>
+            <tr>
+                <td><label for="personName">Name:</label></td>
+                <td><input type="text" id="personName" name="personName" required></td>
+            </tr>
+            <tr>
+                <td><label for="age">Age:</label></td>
+                <td><input type="text" id="age" name="age" required></td>
+            </tr>
+            <tr>
+                <td><label>Gender:</label></td>
+                <td class="gender-labels">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other" required>
+                    <label for="other">Other</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="birthdate">Date of Birth:</label></td>
+                <td><input type="date" id="birthdate" name="birthdate" required></td>
+            </tr>
+            <tr>
+                <td><label for="city">City:</label></td>
+                <td><input type="text" id="city" name="city" required></td>
+            </tr>
+            <tr>
+                <td><label for="state">State:</label></td>
+                <td><input type="text" id="state" name="state" required></td>
+            </tr>
+            <tr>
+                <td><label for="country">Country:</label></td>
+                <td><input type="text" id="country" name="country" required></td>
+            </tr>
+            <tr>
+                <td><label for="rank">Rank:</label></td>
+                <td><input type="text" id="rank" name="rank" required></td>
+            </tr>
+            <tr>
+                <td><label for="source">Source:</label></td>
+                <td><input type="text" id="source" name="source" required></td>
+            </tr>
+            <tr>
+                <td><label for="finalWorth">Final Worth:</label></td>
+                <td><input type="text" id="finalWorth" name="finalWorth" required></td>
+            </tr>
+            <tr>
+                <td><label for="category">Category:</label></td>
+                <td><input type="text" id="category" name="category" required></td>
+            </tr>
+            <tr>
+                <td><label for="organization">Organization:</label></td>
+                <td><input type="text" id="organization" name="organization" required></td>
+            </tr>
+            <tr>
+                <td><label for="industries">Industries:</label></td>
+                <td><input type="text" id="industries" name="industries" required></td>
+            </tr>
+            <tr>
+                <td><label for="title">Title:</label></td>
+                <td><input type="text" id="title" name="title" required></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+        </table>
+
+        <div class="form-footer">
+            <small>By submitting, you agree to our terms and conditions.</small>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
+
+
+{% endblock %}

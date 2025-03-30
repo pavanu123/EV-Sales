@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - EV SALES</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  
+
+  <!-- Favicons -->
+  <link href="static/img/evlogo.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <link rel="stylesheet" type="text/css" href="C:\Users\Admin\PycharmProjects\miniproject\static\css">
+
+
+
+</head>
+
+
+<body class="index-page">
+
+
+  <header id="header" class="header fixed-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:P4@gmail.com">contactP4@gmail.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 95386 26842</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="https://wa.me/qr/RVX4K4NHLQMLE1" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://wa.me/qr/Q45H2RAHOPDNM1" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://wa.me/qr/CLEHDSY36OTSE1" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://wa.me/qr/3XQR3S4A5VWDE1" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename">EV Sales</h1>
+          <span>.</span>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            {% block a %}
+            <li><a href="#about">About</a></li>
+            <li><a href="#ev charging points">EV charging points</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('govt') }}">Govt & incentives</a></li>
+            <li><a href="{{ url_for('buy') }}">Purchase</a></li>
+
+            <li><a href="#contact">Contact</a></li>{% endblock %}
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+  {% block body %}
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section accent-background">
+
+      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-5 justify-content-between">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h2><span>Electric </span><span class="accent">vehicles</span></h2>
+            <p>"Driving the future: EV sales are accelerating toward a greener, smarter, and more sustainable tomorrow!"</p>
+            <div class="d-flex">
+              <a href="/history" class="btn-get-started">Get Started</a>
+              <a href="https://youtu.be/8Ca3PHdgwYE?si=KbGCHt-U78KqBf3V" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            </div>
+          </div>
+          <div class="col-lg-5 order-1 order-lg-2">
+            <img src="C:\Users\Admin\PycharmProjects\miniproject\static\img\home" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+
+
+
+          </div>
+        </div>
+      </div>
+      <br>
+
+    </section><!-- /Hero Section -->
+
+ <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About <br></h2>
+        <p>Ready to Drive Electric? </p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3>Electric car sales neared 14 million in 2023, 95% of which were in China, Europe and the United States</h3>
+            <img src="static/img/about.jpg" class="img-fluid rounded-4 mb-4" alt="">
+            <p>After 2010, electric vehicle (EV) sales saw significant growth, driven by advancements in battery technology, government incentives, and increased consumer awareness about environmental issues..</p>
+            <p>As governments around the world introduced stricter emissions standards and more substantial subsidies, global EV sales soared. In 2020, despite the impact of the COVID-19 pandemic on the global automotive market, EV sales continued to rise, with Europe overtaking China in market share. The emergence of new electric models from established automakers like Ford, Volkswagen, and GM further accelerated EV adoption, while Tesla maintained its leadership..</p>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="content ps-0 ps-lg-5">
+              <p class="fst-italic">
+                After 2010, three electric vehicles significantly boosted sales and shaped the EV market. .
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> <span> The <b>Tesla Model S</b>, launched in 2012, redefined electric cars by offering a luxurious, high-performance vehicle with a long range, proving that EVs could rival traditional premium cars.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>The<b>Nissan Leaf</b> , introduced in 2010, made electric vehicles more accessible as one of the first mass-market EVs. Its affordability and practicality made it a popular choice for urban commuters and showcased the potential of compact electric cars..</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>The <b>Chevrolet Bolt EV</b>, released in 2016, bridged the gap between affordability and range, offering over 200 miles of range at a competitive price. This achievement set a new standard for mid-price EVs and broadened their appeal in the U.S. market. .</span></li>
+              </ul>
+              <p>
+                The introduction of long-range, high-performance models like the Tesla Model S and mass-market vehicles such as the Nissan Leaf and Chevrolet Bolt EV helped shift public perception, demonstrating that EVs can be practical, desirable, and eco-friendly.
+              </p>
+
+              <div class="position-relative mt-4">
+                <img src="static/img/about-2.jpg" class="img-fluid rounded-4" alt="">
+                <a href="https://youtu.be/BxGdNuXpLdA?si=koauEA47pP_-WGUb" class="glightbox pulsating-play-btn"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+
+    </section><!-- /About Section -->
+    
+    
+   
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section">
+
+      <div class="container">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 500
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="static/img/clients/cnc-12.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/img/clients/cnc-2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/img/clients/cnc-3.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/img/clients/cnc-4.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/img/clients/cnc-55.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/img/clients/cnc-6.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/img/clients/cnc-7.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/img/clients/cnc-8.png" class="img-fluid" alt=""></div>
+          </div>
+        </div>
+
+      </div>
+
+    <!-- /Clients Section -->
+    
+</section>
+
+<section id="ev charging points" class="charging section">
+  <!-- map Title --> 
+  <div class="container section-title" data-aos="fade-up" >
+    <h2>EV Charging points</h2>
+    <p>"Find your nearest charging stations!"</p>
+  </div><!-- End Section Title -->
+ 
+  <center><iframe
+  src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d125244.75468610796!2d77.48775022260082!3d12.855058757836924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sEV%20charging%20points%20in%20india%20map!5e0!3m2!1sen!2sin!4v1733811780248!5m2!1sen!2sin"
+   width="600" height="450" style="border:0;" allowfullscreen="" loading="fast" referrerpolicy="no-referrer-when-downgrade">
+  </iframe></center>
+
+</section>
+    <!-- Team Section -->
+     <!-- Team Section -->
+     <section id="team" class="team section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Team</h2>
+        <p>"Our team is a passionate group of innovators, each bringing unique skills and unwavering dedication to achieve our shared goals."</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <img src="static/img/team/team-8.jpg" class="img-fluid" alt="" width="300" height="600">
+              <h4>PAVAN U</h4>
+              <span>Customer Support and Service</span>
+              <div class="social">
+                <a href="https://wa.me/qr/RVX4K4NHLQMLE1"><i class="bi bi-twitter-x"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/pavan.063?utm_source=qr&igsh=MTAwOThxbDQxdDE2aA=="><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/pavan-u-7063122a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <img src="static/img/team/team-11.jpg" class="img-fluid" alt="">
+              <h4>POOJA S</h4>
+              <span> Project management</span>
+              <div class="social">
+                <a href="https://wa.me/qr/Q45H2RAHOPDNM1 "><i class="bi bi-twitter-x"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/pooja-s-291532261?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <img src="static/img/team/team-6.jpg" class="img-fluid" alt="">
+              <h4>PRIYA RK</h4>
+              <span>Quality assurance</span>
+              <div class="social">
+                <a href="https://wa.me/qr/CLEHDSY36OTSE1"><i class="bi bi-twitter-x"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/priyeahhhh__/"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/priya-rk-732062309/"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <img src="static/img/team/team-10.jpg" class="img-fluid" alt="">
+              <h4>PAVAN TL</h4>
+              <span>Dealership and Retail Operations</span>
+              <div class="social">
+                <a href="https://wa.me/qr/3XQR3S4A5VWDE1"><i class="bi bi-twitter-x"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/pavan-t-l-834bb3259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact section" loading="fast">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up" loading="fast">
+        <h2>Contact</h2>
+        <p>"Feel free to reach out to us—we're here to assist and answer any of your questions!"</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;" data-aos="fade-up" data-aos-delay="100" loading="fast">
+
+  <!-- Info Container -->
+  <div class="info-container" style="flex: 1;">
+    <div class="info-item" data-aos="fade-up" data-aos-delay="100">
+      <i class="bi bi-geo-alt flex-shrink-0"></i>
+      <div>
+        <h3>Address</h3>
+        <p>KS Institute of technologies</p>
+      </div>
+    </div>
+
+    <div class="info-item" data-aos="fade-up" data-aos-delay="100">
+      <i class="bi bi-telephone flex-shrink-0"></i>
+      <div>
+        <h3>Call Us</h3>
+        <p>+91 95386 26842</p>
+      </div>
+
+    </div>
+
+    <div class="info-item" data-aos="fade-up" data-aos-delay="100">
+      <i class="bi bi-envelope flex-shrink-0"></i>
+      <div>
+        <h3>Email Us</h3>
+        <p>P4@.gmail.com</p>
+      </div>
+    </div>
+
+    <div class="info-item" data-aos="fade-up" data-aos-delay="100">
+      <i class="bi bi-clock flex-shrink-0"></i>
+      <div>
+        <h3>Open Hours:</h3>
+        <p>Mon-Sat: 8:40AM - 3:50PM</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Map Container -->
+  <div class="map-container" style="flex: 1; text-align: right;">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.49741042098!2d77.3507366125804!3d12.971598986786822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670b5b7e7bb%3A0x4b795d9b1b93f5cb!2sKS%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1691234567890!5m2!1sen!2sin"
+      width="100%" height="600" style="border:0; border-radius: 10px;" allowfullscreen=""
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div><br>
+  
+</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .vertical-form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        max-width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+ 
+    <div style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+      <div style="width: 100%; max-width: 500px; padding: 20px;">    
+     <form class="vertical-form" action="https://submit-form.com/5XgIaZNJy" >
+      <label for="first-name">First name</label>
+      <input id="first-name" name="first-name" type="text" />
+      <label for="last-name">Last name</label>
+      <input id="last-name" name="last-name" type="text" />
+      <label for="message">Message</label>
+      <textarea id="message" name="message" cols="15" rows="5"></textarea>
+      <button type="submit" onclick="alertSubmitMessage()">Submit</button>
+     </form>
+     <script>
+      function alertSubmitMessage(){
+        alert('Thanks for Contacting Us, Will reach back to you.' )
+      }
+     </script>
+     </div>
+    </div>
+    </div>
+  </div>
+  </body>
+</html>
+
+</section>
+  </main>
+{% endblock %}
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">EV Sales</span>
+          </a>
+          <p>"Thank you for visiting—together, let's drive towards a sustainable future!"</p>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>KS Institute of technologies</p>
+          <p>Mallasandra ,Banglore</p>
+          <p>India</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+91 95386 26842</span></p>
+          <p><strong>Email:</strong> <span>P4@.gmail.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">EV Sales</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact.css form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">pooja and team</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="static/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="static/js/main.js"></script>
+
+</body>
+
+</html>
+

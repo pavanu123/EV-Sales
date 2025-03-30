@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Cost Savings Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #813a8f, #031425);
+        }
+        .calculator-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .cost-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .cost-card:hover {
+            transform: translateY(-5px);
+        }
+        .results-card {
+            background: linear-gradient(45deg, #093209, #45a049);
+            color: white;
+        }
+        .chart-container {
+            height: 400px;
+            margin-top: 30px;
+        }
+        .savings-highlight {
+            font-size: 24px;
+            font-weight: bold;
+            
+            color: #ffffff;
+        }
+        .input-group-text {
+            background-color: #42a24a;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">EV Motors</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="govt.html">Govt & Incentives</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cost Savings Calculator</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="buy.html">Buy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                 
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="calculator-container">
+        <h2 class="text-center mb-4">EV Cost Savings Calculator</h2>
+        
+        <div class="row">
+            <!-- Vehicle Costs -->
+            <div class="col-md-6">
+                <div class="cost-card">
+                    <h4>Vehicle Costs</h4>
+                    <div class="mb-3">
+                        <label class="form-label">EV Purchase Price (₹)</label>
+                        <input type="number" class="form-control" id="evPrice" value="40000">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Gas Vehicle Purchase Price (₹)</label>
+                        <input type="number" class="form-control" id="gasPrice" value="30000">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Operating Costs -->
+            <div class="col-md-6">
+                <div class="cost-card">
+                    <h4>Operating Costs</h4>
+                    <div class="mb-3">
+                        <label class="form-label">Annual Mileage</label>
+                        <input type="number" class="form-control" id="mileage" value="12000">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Electricity Rate (₹/kWh)</label>
+                        <input type="number" class="form-control" id="electricityRate" value="0.14" step="0.01">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Gas Price (₹/gallon)</label>
+                        <input type="number" class="form-control" id="gasPricePerGallon" value="3.50" step="0.01">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vehicle Efficiency -->
+        <div class="cost-card">
+            <h4>Vehicle Efficiency</h4>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">EV Efficiency (miles/kWh)</label>
+                        <input type="number" class="form-control" id="evEfficiency" value="3.5" step="0.1">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">Gas Vehicle MPG</label>
+                        <input type="number" class="form-control" id="gasMpg" value="25">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Maintenance & Insurance -->
+        <div class="cost-card">
+            <h4>Annual Costs</h4>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">EV Maintenance Cost (₹)</label>
+                        <input type="number" class="form-control" id="evMaintenance" value="300">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">EV Insurance (₹)</label>
+                        <input type="number" class="form-control" id="evInsurance" value="1200">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">Gas Vehicle Maintenance Cost (₹)</label>
+                        <input type="number" class="form-control" id="gasMaintenance" value="800">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Gas Vehicle Insurance (₹)</label>
+                        <input type="number" class="form-control" id="gasInsurance" value="1000">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-primary w-100 mb-4" onclick="calculateSavings()">Calculate Savings</button>
+
+        <!-- Results Section -->
+        <div class="cost-card results-card">
+            <h4>Results</h4>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>5-Year Total Cost</h5>
+                    <p>EV: ₹<span id="evTotalCost">0</span></p>
+                    <p>Gas: ₹<span id="gasTotalCost">0</span></p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Total Savings</h5>
+                    <p class="savings-highlight">₹<span id="totalSavings">0</span></p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Break-even Point</h5>
+                    <p><span id="breakEven">0</span> years</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="cost-card">
+                    <h4>Cumulative Costs Over Time</h4>
+                    <canvas id="costChart"></canvas>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="cost-card">
+                    <h4>Annual Cost Breakdown</h4>
+                    <canvas id="breakdownChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        let costChart, breakdownChart;
+
+        function calculateSavings() {
+            // Get input values
+            const evPrice = Number(document.getElementById('evPrice').value);
+            const gasPrice = Number(document.getElementById('gasPrice').value);
+            const mileage = Number(document.getElementById('mileage').value);
+            const electricityRate = Number(document.getElementById('electricityRate').value);
+            const gasPricePerGallon = Number(document.getElementById('gasPricePerGallon').value);
+            const evEfficiency = Number(document.getElementById('evEfficiency').value);
+            const gasMpg = Number(document.getElementById('gasMpg').value);
+            const evMaintenance = Number(document.getElementById('evMaintenance').value);
+            const gasMaintenance = Number(document.getElementById('gasMaintenance').value);
+            const evInsurance = Number(document.getElementById('evInsurance').value);
+            const gasInsurance = Number(document.getElementById('gasInsurance').value);
+
+            // Calculate annual costs
+            const evAnnualEnergyCost = (mileage / evEfficiency) * electricityRate;
+            const gasAnnualEnergyCost = (mileage / gasMpg) * gasPricePerGallon;
+
+            // Calculate 5-year costs
+            const years = 5;
+            const evTotalCost = evPrice + (evAnnualEnergyCost + evMaintenance + evInsurance) * years;
+            const gasTotalCost = gasPrice + (gasAnnualEnergyCost + gasMaintenance + gasInsurance) * years;
+
+            // Calculate break-even point
+            const annualSavings = (gasAnnualEnergyCost + gasMaintenance + gasInsurance) - 
+                                (evAnnualEnergyCost + evMaintenance + evInsurance);
+            const initialCostDiff = evPrice - gasPrice;
+            const breakEvenYears = initialCostDiff / annualSavings;
+
+            // Update results
+            document.getElementById('evTotalCost').textContent = Math.round(evTotalCost).toLocaleString();
+            document.getElementById('gasTotalCost').textContent = Math.round(gasTotalCost).toLocaleString();
+            document.getElementById('totalSavings').textContent = Math.round(gasTotalCost - evTotalCost).toLocaleString();
+            document.getElementById('breakEven').textContent = breakEvenYears.toFixed(1);
+
+            // Update charts
+            updateCharts(evPrice, gasPrice, evAnnualEnergyCost, gasAnnualEnergyCost, 
+                        evMaintenance, gasMaintenance, evInsurance, gasInsurance);
+        }
+
+        function updateCharts(evPrice, gasPrice, evEnergy, gasEnergy, 
+                            evMaintenance, gasMaintenance, evInsurance, gasInsurance) {
+            // Destroy existing charts
+            if (costChart) costChart.destroy();
+            if (breakdownChart) breakdownChart.destroy();
+
+            // Cumulative cost chart
+            const years = Array.from({length: 6}, (_, i) => i);
+            const evCosts = years.map(year => evPrice + (evEnergy + evMaintenance + evInsurance) * year);
+            const gasCosts = years.map(year => gasPrice + (gasEnergy + gasMaintenance + gasInsurance) * year);
+
+            costChart = new Chart(document.getElementById('costChart'), {
+                type: 'line',
+                data: {
+                    labels: years,
+                    datasets: [{
+                        label: 'EV Total Cost',
+                        data: evCosts,
+                        borderColor: '#4CAF50',
+                        fill: false
+                    }, {
+                        label: 'Gas Vehicle Total Cost',
+                        data: gasCosts,
+                        borderColor: '#FF5722',
+                        fill: false
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Cumulative Cost (₹)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Years'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Cost breakdown chart
+            breakdownChart = new Chart(document.getElementById('breakdownChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['Energy', 'Maintenance', 'Insurance'],
+                    datasets: [{
+                        label: 'EV Annual Costs',
+                        data: [evEnergy, evMaintenance, evInsurance],
+                        backgroundColor: '#4CAF50'
+                    }, {
+                        label: 'Gas Vehicle Annual Costs',
+                        data: [gasEnergy, gasMaintenance, gasInsurance],
+                        backgroundColor: '#FF5722'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Annual Cost (₹)'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Initial calculation
+        calculateSavings();
+    </script>
+</body>
+</html>

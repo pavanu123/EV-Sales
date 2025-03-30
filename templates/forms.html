@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV MOTORS - Electric Vehicle Sales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1593941707882-a5bba14938c7');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .featured-cars {
+            padding: 4rem 0;
+        }
+
+        .card {
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #2ecc71 !important;
+        }
+
+        .nav-link {
+            color: #333;
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            background-color: #2ecc71;
+            border-color: #2ecc71;
+        }
+
+        .btn-primary:hover {
+            background-color: #27ae60;
+            border-color: #27ae60;
+        }
+        .contact-section {
+    background-color: #f8f9fa;
+}
+
+.contact-info {
+    height: 100%;
+}
+
+.info-item {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item i {
+    font-size: 20px;
+    display: block;
+}
+
+.info-item h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.contact-form {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.map-container {
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        margin-bottom: 30px;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">EV Motors</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="govt.html">Govt & Incentives</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calc.html">Cost Savings Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="buy.html">Buy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                 
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="HOME" class="Home">
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="display-4">Drive the Future Today</h1>
+                    <p class="lead">Discover our premium selection of electric vehicles for a sustainable tomorrow.</p>
+                    <a href="history.html" class="btn btn-primary btn-lg">Explore Vehicles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Cars Section -->
+    <section id="about" class="about section">
+    <h2 class="text-center mb-5">Trending Electric Vehicles</h2>
+     <marquee behavior="scroll" direction="left" scrollamount="15" onmouseover="this.stop()" onmouseout="this.start();">
+    <section class="featured-cars">
+        <div class="container">
+          
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89" class="card-img-top" alt="Tesla Model S">
+                        <div class="card-body">
+                            <h5 class="card-title">Tesla Model S</h5>
+                            <p class="card-text">Luxury electric sedan with outstanding <br>performance and range.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="porschety.avif" class="card-img-top" alt="Porsche Taycan">
+                        <div class="card-body">
+                            <h5 class="card-title">Porsche Taycan</h5>
+                            <p class="card-text">Sports car performance meets electric efficiency.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1571987502227-9231b837d92a" class="card-img-top" alt="BMW i4">
+                        <div class="card-body">
+                            <h5 class="card-title">BMW i4</h5>
+                            <p class="card-text">German engineering excellence in electric form.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</marquee>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="contact-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Contact</h2>
+        <p class="text-center mb-5">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+
+        <div class="row">
+            <!-- Contact Info Cards -->
+            <div class="col-lg-4 mb-4">
+                <div class="contact-info bg-success text-white p-4 rounded h-100">
+                    <div class="info-item mb-4">
+                        <i class="fas fa-map-marker-alt mb-2"></i>
+                        <h4>Address</h4>
+                        <p>A108 Adam Street, New York, NY 535022</p>
+                    </div>
+
+                    <div class="info-item mb-4">
+                        <i class="fas fa-phone mb-2"></i>
+                        <h4>Call Us</h4>
+                        <p>+1 5589 55488 55</p>
+                    </div>
+
+                    <div class="info-item mb-4">
+                        <i class="fas fa-envelope mb-2"></i>
+                        <h4>Email Us</h4>
+                        <p>info@example.com</p>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-clock mb-2"></i>
+                        <h4>Open Hours</h4>
+                        <p>Mon-Sat: 11AM - 23PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+                <form class="contact-form p-4 bg-light rounded">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Subject" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="5" placeholder="Message" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary px-4">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Google Map -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="map-container" style="width: 100%; height: 400px;">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3697.2899291767494!2d77.54018337507458!3d12.859314187445849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae407386b7172d%3A0x1569e8679d608fe0!2sK%20S%20School%20of%20Engineering%20and%20Management!5e1!3m2!1sen!2sin!4v1733657719450!5m2!1sen!2sin"
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="fast">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    
+<h2>EV Charging Stations in Bangalore</h2>
+<!-- Google Map -->
+<div class="row mt-5">
+    <div class="col-12 ">
+        <div class="map-container" style="width: 100%; height: 400px;">
+            
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d182907.3989192674!2d77.57529812218502!3d12.860987654717626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1selectric%20vehicle%20charging%20stations%20in%20bangalore!5e0!3m2!1sen!2sin!4v1733670690770!5m2!1sen!2sin"
+                width="100%" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="fast">
+            </iframe>
+        </div>
+    </div>
+</div>
+
+</section>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

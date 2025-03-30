@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="row">
+    <div class="col-5 mx-auto">
+        <h3>EDIT DETAILS</h3><hr>
+        <form method="post" action="{{ url_for('edit_user',sno=datas.SNo) }}">
+            <div class="form-group">
+                <label>car name</label>
+                <input type="text" name="cname" required class="form-control" value='{{datas.CNAME}}'>
+            </div>
+            <div class="form-group">
+                <label>country</label>
+                <input type="text" name="country" required class="form-control" value='{{datas.COUNTRY}}'>
+            </div>
+            <div class="form-group">
+                <label>year</label>
+                <input type="integer" name="year" required class="form-control" value='{{datas.YEAR}}'>
+            </div>
+            <div class="form-group">
+                <label>sales</label>
+                <input type="text" name="sales" required class="form-control" value='{{datas.SALES}}'>
+            </div>
+            <input type="submit" value="Submit" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+{% endblock %}
